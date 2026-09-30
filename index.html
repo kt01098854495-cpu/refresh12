@@ -1,0 +1,161 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightgreen;
+        }
+
+        #div1 {
+            height: 10%;
+            background-color: green;
+            color: white;
+            font-size: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div2 {
+            height: 80%;
+            background-color: yellow;
+	   text-align:center;
+	    justify-content: center;
+    align-items: center;
+        }
+
+        .box1 {
+            font-size: 3em;
+            width: 20%;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+
+        #b1 {
+            font-size: 3em;
+            color: red;
+        }
+
+        #btn1 {
+            background-color: red;
+            font-size: 2em;
+            width: 10%;
+            color: white;
+    	text-align: center;
+        }
+
+        #div3 {
+            height: 10%;
+            background-color: green;
+            color: white;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">계산기</div>
+
+    <div id="div2">
+
+ <br>
+<input type="text" class="box1" id="add1">
+
+<b id="b1">+</b>
+
+<input type="text" class="box1" id="add2">
+
+<button id="btn1" onclick="add()">=</button>
+
+<input type="text" class="box1" id="add3">
+
+
+<br><br>
+<input type="text" class="box1" id="add4">
+
+<b id="b1">-</b>
+
+<input type="text" class="box1" id="add5">
+
+<button id="btn1" onclick="sub()">=</button>
+
+<input type="text" class="box1" id="sub3">
+
+
+<br><br>
+<input type="text" class="box1" id="add6">
+
+<b id="b1">×</b>
+
+<input type="text" class="box1" id="add7">
+
+<button id="btn1" onclick="mul()">=</button>
+
+<input type="text" class="box1" id="add8">
+
+
+<br><br>
+<input type="text" class="box1" id="div4">
+
+<b id="b1">÷</b>
+
+<input type="text" class="box1" id="div5">
+
+<button id="btn1" onclick="div()">=</button>
+
+<input type="text" class="box1" id="div6">
+
+    </div>
+
+    <div id="div3">메카트로닉스 황상윤</div>
+
+
+    <script>
+
+        function add() {
+            let a = Number(document.getElementById("add1").value);
+            let b = Number(document.getElementById("add2").value);
+
+            let result =a + b;
+
+            document.getElementById("add3").value = result;
+        }
+
+
+        function sub() {
+            let a = Number(document.getElementById("add4").value);
+            let b = Number(document.getElementById("add5").value);
+
+            let result = a - b;
+
+            document.getElementById("sub3").value = result;
+        }
+
+
+        function mul() {
+            let a = Number(document.getElementById("add6").value);
+            let b = Number(document.getElementById("add7").value);
+
+            let result = a * b;
+
+            document.getElementById("add8").value = result;
+        }
+
+
+        function div() {
+            let a = Number(document.getElementById("div4").value);
+            let b = Number(document.getElementById("div5").value);
+
+            let result = a / b;
+
+            document.getElementById("div6").value = result;
+        }
+
+    </script>
+
+</body>
+</html>
